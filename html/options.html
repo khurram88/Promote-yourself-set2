@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/options.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.notice.css" />
+	
+    <title>Your Information</title>
+    
+    <script type="text/javascript" src="../js/jquery/jquery-1.7.1.min.js"></script>	
+	<script src="../js/jquery/jquery-impromptu.3.2.js"></script>
+	<link rel="stylesheet" href="../css/jquery-impromptu.3.2.css" />
+	<script src="../js/jquery/jquery.notice.js"></script>
+	<!--<script type="text/javascript" src="../js/sm/attributes.js"></script>
+	<script type="text/javascript" src="../js/sm/scripts.js"></script>-->
+	<script type="text/javascript" src="../js/sm/options-country.js"></script>
+	<script type="text/javascript" src="../js/sm/options-states.js"></script>
+	<script type="text/javascript" src="../js/sm/options.js"></script>
+
+</head>
+<body>
+<center>
+	<div class="optionlist">
+		<div id="headerr" style="float:left; width:99%;">
+			<div id="header_left" style="float:left; width: 51%;">
+				<button class="go" id="go" title="Click here to start registering accounts" style="position: absolute; top: 0px; left: 14px;"></button>
+				<button class="reset" id="reset" title="Click here to reset data" style="position: absolute; top: 0px; left: 102px;"></button>
+			<!--	<button class="url_guide" id="urlguide" title="Click here to start check the list of user url" style="position: absolute; top: 0px; left: 132px;"></button> -->
+				<button class="save" id="save" title="Click here to save data" style="position: absolute; top: 0px; left: 192px;"></button>
+			</div>
+		
+			<div id="header_right" style="float:right; margin-top: 8px; margin-right: -6px;">
+				<img src="../images/header.png" style="margin-left: 5px;"></img>
+			</div>
+		</div>
+		
+		<!--<br/>    
+		<img src="../images/header_new_new.png">
+		<br/><br/>
+
+		<button class="btn" id="go" title="Click here to start registering accounts">GO</button>
+		<button class="btn" id="reset" title="Click here to reset data">RESET</button>
+		<button class="btn" id="urlguide" title="Click here to start check the list of user url">URL GUIDE</button>
+		<button class="btn" id="save" title="Click here to start save data">SAVE</button>
+		<br/><br/>
+		-->
+		<div id="mainContainer" style="width:518px; height:525px; overflow-y:scroll; overflow-x:hidden" >
+
+		
+		<table border="0" cellpadding="0" cellspacing="0" width="500px" id="mainTable">			
+			<tbody>
+			
+			<tr>
+				<td colspan="2"><img src="../images/loadopt.png"></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Load From Sets 
+					<a tabindex="-1" href="#" class="q" id="loadfromsets">?</a>
+				</td>
+
+				<td style="width:55%">
+					
+					<div style="float:left; width: 99%">
+						<div style="float: left; width: 54%; padding-top: 7px;">
+							<input type="file" id="fileToLoad" style="width: 173px;">
+						</div>
+						<div style="float: left; width: 34%; margin-left: 24px;">
+							<button class="btn" title="Loads a set of pre-formatted data from a other sets." id="load_data"></button>
+						</div>
+					</div>
+					
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+				
+					<img src="../images/accopt_new.png" style="margin-top: 7px;">
+				</td>
+			</tr>
+
+			</tbody>
+			
+			
+			<tr class="c0">
+				<td width="45%">
+					<span style="padding:10px;">Yahoo Email</span>
+					<a id="useremail1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td width="55%">
+					<input id="useremail" name="useremail" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Password</span>
+					<a id="password1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="password" name="password" type="text">
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+					
+					<img src="../images/perinfo.png" style="margin-top: 7px;">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">First Name</span>
+					<a id="firstname1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="firstname" name="firstname" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Middle Name</span>
+					<a id="middlename1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="middlename" name="middlename" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Last Name</span>
+					<a id="lastname1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="lastname" name="lastname" type="text">
+				</td>
+			</tr>
+			
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Country</span>
+					<a id="country1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<select id="country" name="country"></select>
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td style="position:relative;">
+					<span style="padding:10px;">ZIP</span>
+					<span style="position: absolute; left:475px;"><img id="spinner" src="../images/loading_spinner.gif" style="display:none"></img></span><a id="zip1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="zip" name="zip" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">City</span>
+					<a id="city1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="city" name="city" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">State</span>
+					<a id="state1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<!--<select id="state" name="state"></select>-->
+					<input type="text" id="state"/>
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Birth Year</span>
+					<a id="birthyear1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<select id="birthyear" name="birthyear"></select>
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Birth Month</span>
+					<a id="birthmonth1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<select id="birthmonth" name="birthmonth"></select>
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Birth Day</span>
+					<a id="birthday1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<select id="birthday" name="birthday"></select>
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Gender</span>
+					<a id="gender" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td style="padding-top: 9px; padding-bottom: 9px;">
+					<input id="male" name="gender" type="radio"><label for="male">Male</label>
+					<input id="female" name="gender" type="radio"><label for="female">Female</label>
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Blog Address</span>
+					<a id="username1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="username" name="username" type="text">
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+					<img src="../images/educinfo.png" style="margin-top: 7px;">
+				</td>
+			
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">College</span>
+					<a id="college1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="college" name="college" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Major</span>
+					<a id="major1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="major" name="major" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Degree</span>
+					<a id="degree1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<select id="degree" name="degree"></select>
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Month Started</span>
+					<a id="educationstartmonth1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<select id="educationstartmonth" name="educationstartmonth"></select>
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Year Started</span>
+					<a id="educationstartyear1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<select id="educationstartyear" name="educationstartyear"></select>
+				</td>
+			</tr>
+			
+	</table>
+		
+	<div class="eduSlide">
+		<table border="0" cellpadding="0" cellspacing="0" width="500px">
+			<tr class="c0">
+				<td width="45%">
+					<span style="padding:10px;">Month Ended</span>
+					<a id="educationendmonth1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td width="55%">
+					<select id="educationendmonth" name="educationendmonth"></select>
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Year Ended</span>
+					<a id="educationendyear1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<select id="educationendyear" name="educationendyear"></select>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="500px">
+			
+			<tr class="c0">
+				<td width="45%" style="padding: 10px;">
+					
+				</td>
+				<td width="55%" style="padding-top: 7px;">
+					<input type="checkbox" id="presently_studied" style="width:5%"/> <header style="display:inline-block; font-family: Futura Today; color:#333; font-size:14px;">  <label for="presently_studied">Presently in school </label></header>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+					<img src="../images/jobinfo.png" style="margin-top: 7px;">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Employer</span>
+					<a id="employer1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="employer" name="employer" type="text">
+				</td>
+			</tr>
+			
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Job Title</span>
+					<a id="jobtitle1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="jobtitle" name="jobtitle" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Job Description</span>
+					<a id="jobdesc1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="jobdesc" name="jobdesc" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Month Started</span>
+					<a id="jobstartmonth1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<select id="jobstartmonth" name="jobstartmonth"></select>
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Year Started</span>
+					<a id="jobstartyear1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<select id="jobstartyear" name="jobstartyear"></select>
+				</td>
+			</tr>
+	
+	</table>
+		
+		<div class="empSlide">
+			<table border="0" cellpadding="0" cellspacing="0" width="500px">
+				<tr class="c1">
+					<td width="45%">
+						<span style="padding:10px;">Month Ended</span>
+						<a id="jobendmonth1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+					</td width="55%">
+					<td>
+						<select id="jobendmonth" name="jobendmonth"></select>
+					</td>
+				</tr>
+			
+				<tr class="c0">
+					<td>
+						<span style="padding:10px;">Year Ended</span>
+						<a id="jobendyear1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+					</td>
+					<td>
+						<select id="jobendyear" name="jobendyear"></select>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		<table border="0" cellpadding="0" cellspacing="0" width="500px">
+			<tr class="c0">
+				<td width="45%" style="padding: 10px;">
+					
+				</td>
+				<td width="55%" style="padding-top: 7px;">
+					<input type="checkbox" id="presently_employed" style="width:5%"/> <header style="display:inline-block; font-family: Futura Today; color:#333; font-size:14px;"> <label for="presently_employed">Presently employed</label> </header>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+					<img src="../images/addinfo.png" style="margin-top: 7px;">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Keywords</span>
+					<a id="keywords1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="keywords" name="keywords" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Tagline</span>
+					<a id="tagline1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="tagline" name="tagline" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Organizations</span>
+					<a id="organizations1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="organizations" name="organizations" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Short Bio</span>
+					<a id="shortbio1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="shortbio" name="shortbio" type="text">
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+					<img src="../images/links.png" style="margin-top: 7px;">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Link 1</span>
+					<a id="link1_oLink1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link1_oLinkSet2" name="link1_oLink" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Link Title 1</span>
+					<a id="linktitle11" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link1_oTitleSet2" name="linktitle1" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Link 2</span>
+					<a id="link2_oLink1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link2_oLinkSet2" name="link2_oLink" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Link Title 2</span>
+					<a id="linktitle21" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link2_oTitleSet2" name="linktitle2" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Link 3</span>
+					<a id="link3_oLink1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link3_oLinkSet2" name="link3_oLink" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Link Title 3</span>
+					<a id="linktitle31" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link3_oTitleSet2" name="linktitle3" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Link 4</span>
+					<a id="link4_oLink1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link4_oLinkSet2" name="link4_oLink" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Link Title 4</span>
+					<a id="linktitle41" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link4_oTitleSet2" name="linktitle4" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Link 5</span>
+					<a id="link5_oLink1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link5_oLinkSet2" name="link5_oLink" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Link Title 5</span>
+					<a id="linktitle51" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link5_oTitleSet2" name="linktitle5" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Link 6</span>
+					<a id="link6_oLink1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link6_oLinkSet2" name="link6_oLink" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Link Title 6</span>
+					<a id="linktitle61" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link6_oTitleSet2" name="linktitle6" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Link 7</span>
+					<a id="link7_oLink1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link7_oLinkSet2" name="link7_oLink" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Link Title 7</span>
+					<a id="linktitle71" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link7_oTitleSet2" name="linktitle7" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Link 8</span>
+					<a id="link8_oLink1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link8_oLinkSet2" name="link8_oLink" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Link Title 8</span>
+					<a id="linktitle81" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link8_oTitleSet2" name="linktitle8" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Link 9</span>
+					<a id="link9_oLink1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link9_oLinkSet2" name="link9_oLink" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Link Title 9</span>
+					<a id="linktitle91" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link9_oTitleSet2" name="linktitle9" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Link 10</span>
+					<a id="link10_oLink1" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link10_oLinkSet2" name="link10_oLink" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Link Title 10</span>
+					<a id="linktitle101" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="link10_oTitleSet2" name="linktitle10" type="text">
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+					
+					<img src="../images/Biographies_new.png" style="margin-top: 7px;">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Bio 1</span>
+					<a id="bio11" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="bio1" name="bio1" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Bio 2</span>
+					<a id="bio21" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="bio2" name="bio2" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Bio 3</span>
+					<a id="bio31" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="bio3" name="bio3" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Bio 4</span>
+					<a id="bio41" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="bio4" name="bio4" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Bio 5</span>
+					<a id="bio51" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="bio5" name="bio5" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Bio 6</span>
+					<a id="bio61" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="bio6" name="bio6" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Bio 7</span>
+					<a id="bio71" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="bio7" name="bio7" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Bio 8</span>
+					<a id="bio81" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="bio8" name="bio8" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c1">
+				<td>
+					<span style="padding:10px;">Bio 9</span>
+					<a id="bio91" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="bio9" name="bio9" type="text">
+				</td>
+			</tr>
+			
+			<tr class="c0">
+				<td>
+					<span style="padding:10px;">Bio 10</span>
+					<a id="bio101" title="" class="q" href="#" style="margin-right:10px;">?</a>
+				</td>
+				<td>
+					<input id="bio10" name="bio10" type="text">
+				</td>
+			</tr>
+			
+			
+			
+			
+		</table>
+		
+			
+		</div>	
+	</div>
+</center>
+</body>
+
+</html>

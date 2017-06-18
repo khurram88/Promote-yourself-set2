@@ -1,0 +1,564 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/options.css" />
+    
+    <title>Your Information</title>
+    
+    <script src="../js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+    
+    <script src="../js/sm/options.js" type="text/javascript"></script>
+</head>
+<body>
+<center>
+<div class="optionlist">
+	<br/>
+    
+	<img src="../images/header.png">
+	<br/><br/>
+    
+	<button class="btn" id="go" title="Click here to start registering accounts">GO</button>
+	<button class="btn" id="reset" title="Click here to reset data">RESET</button>
+	<button class="btn" id="urlguide" title="Click here to start check the list of user url">URL GUIDE</button>
+	<br/><br/>
+    
+	<div style="width:500px">
+		<table style="border:0; padding: 0; width: 100%;">			
+			<tr>
+				<td colspan="2"><img src="../images/loadopt.png"></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Load From Sets <a tabindex="-1" href="javascript://" title="Loads the values from the other sets." class="q">?</a></td>
+				<td style="width:55%">
+					<select id="loadset" style="width: 55%;"></select>
+					&nbsp;&nbsp;
+					<button class="btn" title="Loads a set of pre-formatted data from a other sets." id="load_data">
+						Load Data
+					</button></td>
+			</tr>
+
+			<tr>
+				<td colspan="2"><br/><img src="../images/accopt.png"></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Yahoo Email <a tabindex="-1" href="javascript://" title="Create a new Yahoo.com email. The email address will be spammed so you do not want to use a personal email address. Keep your Yahoo! Email open because you will be going back occasionally to verify your account. It is okay to move on to the next website while waiting for a verification email." class="q">?</a></td>
+				<td style="width:55%">
+					<input type="text" id="useremail"/></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Password <a tabindex="-1" href="javascript://" title="Create a unique password that is between 6-10 characters. This password will be used for every site. Don't forget your password!" class="q">?</a></td>
+				<td style="width:55%">
+					<input type="text" id="password"/></td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<img src="../images/perinfo.png"></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">First Name <a tabindex="-1" href="javascript://" title="Use the first name that you are targeting online. If your full name is Michael Smith, but negative internet articles make more references to Mike Smith, then use Mike. We want to use the most specific version of your name to be the most effective in this process." class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="firstname"/></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Middle Name <a tabindex="-1" href="javascript://" title="A middle name will be used roughly half the time, if you chose to include one.  If you have a specific keyword you are targeting, add it to the end of your last name." class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="middlename"/></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Last Name <a tabindex="-1" href="javascript://" title="Use your regular last name. In rare cases, or if you are a business, you can attach a keyword to the end of your last name. If you have a specific keyword you are targeting, such as Mike Smith Surgeon or Mike Smith Doctor, you can use �Smith Surgeon� or �Smith Doctor� as your last name." class="q">?</a></td>
+				<td style="width:55%">
+					<input type="text" id="lastname"/></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Custom URL <a tabindex="-1" href="javascript://" title="Create a lowercase username with no spaces or special characters. We recommend to use �firstnamelastname� as the format. You can use another keyword word attached to your name, such as �mikesmithsurgeon� or �mikesmithdoctor�." class="q">?</a></td>
+				<td style="width:55%">
+					<input type="text" id="username"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Country <a tabindex="-1" href="javascript://" title="Select the country you are in" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<select id="country"></select></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					State <a tabindex="-1" href="javascript://" title="Use your 2 letter state abbreviation." class="q">?</a>
+				</td>
+
+				<td style="width:55%">
+					<select id="state"></select>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					City <a tabindex="-1" href="javascript://" title="Type in the city you live in or wish to represent." class="q">?</a></td>
+				<td style="width:55%"><input type="text" id="city"/></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Zip <a tabindex="-1" href="javascript://" title="Type in the ZIP Code of your area" class="q">?</a></td><td style="width:55%">
+					<input type="text" id="zip"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Birth Year <a tabindex="-1" href="javascript://" title="The year when you were born" class="q">?</a>
+				</td>
+
+				<td style="width:55%">
+					<select id="birthyear" style="width:100%"></select>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Birth Month <a tabindex="-1" href="javascript://" title="The month of your birthday" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<select id="birthmonth" style="width:100%"></select>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Birth Day <a tabindex="-1" href="javascript://" title="The exact date of your birthday" class="q">?</a>
+				</td>
+
+				<td style="width:55%">
+					<select id="birthday" style="width:100%"></select></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Gender <a tabindex="-1" href="javascript://" title="Specify to what gender you belong" class="q">?</a>
+				</td>
+
+				<td width="55%" align="left">
+					<input type="radio" checked="checked" name="gender" id="male"/>
+					Male
+					<input type="radio" name="gender" id="female"/>
+					Female
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<img src="../images/educinfo.png"></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					College <a tabindex="-1" href="javascript://" title="Type in your alma mater. You can use any of your degrees. Use a high school or certificate if you did not attend college." class="q">?</a>
+				</td>
+
+				<td style="width:55%">
+					<input type="text" id="college"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Location<a tabindex="-1" href="javascript://" title="Type in the location of your attended school." class="q">?</a>
+				</td>
+
+				<td style="width:55%">
+					<input type="text" id="collegelocation"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Major 
+					<a tabindex="-1" href="javascript://" title="Field of studies that you have taken in college" class="q">?</a>
+				</td>
+
+				<td style="width:55%">
+					<input type="text" id="major"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Degree 
+					<a tabindex="-1" href="javascript://" title="Certification of completion of state" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<select id="degree" style="width:100%"></select></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Field Description <a tabindex="-1" href="javascript://" title="Tell us more about the area of your studies" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="majordesc"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">Month Started <a tabindex="-1" href="javascript://" title="Month when you started your college" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<select id="educationstartmonth" style="width:100%"></select>
+				</td>
+			</tr>
+
+			<tr class="c1">            
+				<td style="padding: 10px; width:45%">Year Started <a tabindex="-1" href="javascript://" title="Year when you started your college" class="q">?</a></td>
+				<td style="width:55%"><select id="educationstartyear" style="width:100%"></select></td>            
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">Month Ended <a tabindex="-1" href="javascript://" title="Month when you started your college" class="q">?</a></td>
+				<td style="width:55%"><select id="educationendmonth" style="width:100%"></select></td>            
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Year Ended <a tabindex="-1" href="javascript://" title="Year when your college ended" class="q">?</a></td>
+				<td style="width:55%"><select id="educationendyear" style="width:100%"></select></td>
+			</tr>
+
+			<tr>
+				<td colspan="2"><img src="../images/jobinfo.png"></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Employer <a tabindex="-1" href="javascript://" title="Your most recent employer or company name" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="employer"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">Location<a tabindex="-1" href="javascript://" title="Type in the location of the company you are working for." class="q">?</a>
+				</td>
+				<td style="width:55%"><input type="text" id="joblocation"/></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Description <a tabindex="-1" href="javascript://" title="Tell us about the background of the company" class="q">?</a>
+				</td>
+				<td style="width:55%"><input type="text" id="companydesc"/></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">Job Title <a tabindex="-1" href="javascript://" title="What is your present or most relevant job?" class="q">?</a>
+				</td>
+				<td style="width:55%"><input type="text" id="jobtitle"/></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Job Description <a tabindex="-1" href="javascript://" title="What are you doing in your job?" class="q">?</a></td>
+				<td style="width:55%"><input type="text" id="jobdesc"/></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Month Started <a tabindex="-1" href="javascript://" title="Month when your job started" class="q">?</a></td>
+				<td style="width:55%">
+					<select id="jobstartmonth" style="width:100%"></select>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Year Started <a tabindex="-1" href="javascript://" title="Year when your job started" class="q">?</a></td>
+				<td style="width:55%">
+					<select id="jobstartyear" style="width:100%"></select>
+				</td>            
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">Month Ended <a tabindex="-1" href="javascript://" title="Month when your job ended" class="q">?</a></td>
+				<td style="width:55%">
+					<select id="jobendmonth" style="width:100%"></select></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Year Ended <a tabindex="-1" href="javascript://" title="Year when your job ended" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<select id="jobendyear" style="width:100%"></select>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<img src="../images/addinfo.png">
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Keywords <a tabindex="-1" href="javascript://" title="Type in your name, variations if they apply, and keywords that reflect you online, all separated with commas. Keep it to 80 characters and be sure to use each word individually too. If the full name I decided to use is Mike Smith MD, my keywords could be �Mike Smith MD, Mike, Smith, MD, Mike Smith, Mike, SF Orthopedic Surgeon, Michael Smith MD�. " class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="keywords"/></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">Tagline <a tabindex="-1" href="javascript://" title="Write a short phrase with keywords you are targeting. Use as little junk words as possible: and, if, the, at, of. Instead, use specific and unique words. A good tagline would be �Mike Smith MD Orthopedic Surgeon San Francisco� or �Doctor Mike Smith St. Barnabas Hospital�." class="q">?</a></td>
+				<td style="width:55%">
+					<input type="text" id="tagline"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Interests <a tabindex="-1" href="javascript://" title="List some of your interests and hobbies, separated by commas. You can say things like �hiking, skiing, running, and spending time with my family�." class="q">?</a></td><td style="width:55%"><input type="text" id="interests"/></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">Organizations <a tabindex="-1" href="javascript://" title="List any organizations, affiliations or charities you associate with. You can leave this blank. " class="q">?</a></td><td style="width:55%"><input type="text" id="organizations"/></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Short Bio <a tabindex="-1" href="javascript://" title="Type 1-2 sentences about yourself, using as many keywords as you can. You can also copy 2 sentences from any bio.<br/>140 Characters." class="q">?</a>
+				</td>
+				<td style="width:55%"><input type="text" id="shortbio" maxlength="140"/></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">Bio 1 <a tabindex="-1" href="javascript://" title="Add a different biography to each of the 10 fields. The biography should be 2-4 paragraphs, written in 3rd person, and use keywords that are relevant. You can write them yourself or have the professional writers at SearchManipulator write them for you. If you have less than 10 biographies, leave the rest blank. But remember, more content the better.<br/><br/><center>Professionally written SEO biographies can be purchased from <a style='color: blue; text-decoration: none;' title='Search Manipulator' href='http://www.SearchManipulator.com/Buy-Now' target='_blank'>SearchManipulator</a></center>" class="q">?</a></td>
+				<td style="width:55%">
+					<input type="text" id="bio1"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Bio 2 <a tabindex="-1" href="javascript://" title="Add a different biography to each of the 10 fields. The biography should be 2-4 paragraphs, written in 3rd person, and use keywords that are relevant. You can write them yourself or have the professional writers at SearchManipulator write them for you. If you have less than 10 biographies, leave the rest blank. But remember, more content the better.<br/><br/><center>Professionally written SEO biographies can be purchased from <a style='color: blue; text-decoration: none;' title='Search Manipulator' href='http://www.SearchManipulator.com/Buy-Now' target='_blank'>SearchManipulator</a></center>" class="q">?</a></td>
+				<td style="width:55%">
+					<input type="text" id="bio2"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">Bio 3 <a tabindex="-1" href="javascript://" title="Add a different biography to each of the 10 fields. The biography should be 2-4 paragraphs, written in 3rd person, and use keywords that are relevant. You can write them yourself or have the professional writers at SearchManipulator write them for you. If you have less than 10 biographies, leave the rest blank. But remember, more content the better.<br/><br/><center>Professionally written SEO biographies can be purchased from <a style='color: blue; text-decoration: none;' title='Search Manipulator' href='http://www.SearchManipulator.com/Buy-Now' target='_blank'>SearchManipulator</a></center>" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="bio3"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Bio 4 <a tabindex="-1" href="javascript://" title="Add a different biography to each of the 10 fields. The biography should be 2-4 paragraphs, written in 3rd person, and use keywords that are relevant. You can write them yourself or have the professional writers at SearchManipulator write them for you. If you have less than 10 biographies, leave the rest blank. But remember, more content the better.<br/><br/><center>Professionally written SEO biographies can be purchased from <a style='color: blue; text-decoration: none;' title='Search Manipulator' href='http://www.SearchManipulator.com/Buy-Now' target='_blank'>SearchManipulator</a></center>" class="q">?</a></td>
+				<td style="width:55%">
+					<input type="text" id="bio4"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">Bio 5 <a tabindex="-1" href="javascript://" title="Add a different biography to each of the 10 fields. The biography should be 2-4 paragraphs, written in 3rd person, and use keywords that are relevant. You can write them yourself or have the professional writers at SearchManipulator write them for you. If you have less than 10 biographies, leave the rest blank. But remember, more content the better.<br/><br/><center>Professionally written SEO biographies can be purchased from <a style='color: blue; text-decoration: none;' title='Search Manipulator' href='http://www.SearchManipulator.com/Buy-Now' target='_blank'>SearchManipulator</a></center>" class="q">?</a></td>
+				<td style="width:55%">
+					<input type="text" id="bio5"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Bio 6 <a tabindex="-1" href="javascript://" title="Add a different biography to each of the 10 fields. The biography should be 2-4 paragraphs, written in 3rd person, and use keywords that are relevant. You can write them yourself or have the professional writers at SearchManipulator write them for you. If you have less than 10 biographies, leave the rest blank. But remember, more content the better.<br/><br/><center>Professionally written SEO biographies can be purchased from <a style='color: blue; text-decoration: none;' title='Search Manipulator' href='http://www.SearchManipulator.com/Buy-Now' target='_blank'>SearchManipulator</a></center>" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="bio6"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Bio 7 <a tabindex="-1" href="javascript://" title="Add a different biography to each of the 10 fields. The biography should be 2-4 paragraphs, written in 3rd person, and use keywords that are relevant. You can write them yourself or have the professional writers at SearchManipulator write them for you. If you have less than 10 biographies, leave the rest blank. But remember, more content the better.<br/><br/><center>Professionally written SEO biographies can be purchased from <a style='color: blue; text-decoration: none;' title='Search Manipulator' href='http://www.SearchManipulator.com/Buy-Now' target='_blank'>SearchManipulator</a></center>" class="q">?</a>
+				</td>
+
+				<td style="width:55%">
+					<input type="text" id="bio7"/>
+				</td>
+
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Bio 8 <a tabindex="-1" href="javascript://" title="Add a different biography to each of the 10 fields. The biography should be 2-4 paragraphs, written in 3rd person, and use keywords that are relevant. You can write them yourself or have the professional writers at SearchManipulator write them for you. If you have less than 10 biographies, leave the rest blank. But remember, more content the better.<br/><br/><center>Professionally written SEO biographies can be purchased from <a style='color: blue; text-decoration: none;' title='Search Manipulator' href='http://www.SearchManipulator.com/Buy-Now' target='_blank'>SearchManipulator</a></center>" class="q">?</a></td>
+				<td style="width:55%">
+					<input type="text" id="bio8"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Bio 9 <a tabindex="-1" href="javascript://" title="Add a different biography to each of the 10 fields. The biography should be 2-4 paragraphs, written in 3rd person, and use keywords that are relevant. You can write them yourself or have the professional writers at SearchManipulator write them for you. If you have less than 10 biographies, leave the rest blank. But remember, more content the better.<br/><br/><center>Professionally written SEO biographies can be purchased from <a style='color: blue; text-decoration: none;' title='Search Manipulator' href='http://www.SearchManipulator.com/Buy-Now' target='_blank'>SearchManipulator</a></center>" class="q">?</a>
+				</td>            
+				<td style="width:55%">
+					<input type="text" id="bio9"/>
+				</td>
+			</tr>
+
+			<tr class="c1"><td style="padding: 10px; width:45%">Bio 10 <a tabindex="-1" href="javascript://" title="Add a different biography to each of the 10 fields. The biography should be 2-4 paragraphs, written in 3rd person, and use keywords that are relevant. You can write them yourself or have the professional writers at SearchManipulator write them for you. If you have less than 10 biographies, leave the rest blank. But remember, more content the better.<br/><br/><center>Professionally written SEO biographies can be purchased from <a style='color: blue; text-decoration: none;' title='Search Manipulator' href='http://www.SearchManipulator.com/Buy-Now' target='_blank'>SearchManipulator</a></center>" class="q">?</a>
+				</td>
+				<td style="width:55%">
+				   <input type="text" id="bio10"/>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<img src="../images/links.png">
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Link 1 <a tabindex="-1" href="javascript://" title="Add any neutral or positive websites that you wish to promote. Do not add any negative websites you wish to suppress. We highly recommend adding at least one 'Personal Website', i.e. www.yourname.com. Personal websites can be purchased from SearchManipulator. " class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="link1_oLink"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Link Title 1 <a tabindex="-1" href="javascript://" title="This is the title associated with Link 1. If it's your company website, a good title could be 'Mike Smith MD's Company Website: St. Barnabas'. " class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="linktitle1"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Link 2 <a tabindex="-1" href="javascript://" title="Add any neutral or positive websites that you wish to promote. Do not add any negative websites you wish to suppress. We highly recommend adding at least one 'Personal Website', i.e. www.yourname.com. Personal websites can be purchased from SearchManipulator. " class="q">?</a></td><td style="width:55%"><input type="text" id="link2_oLink"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Link Title 2 <a tabindex="-1" href="javascript://" title="This is the title associated with Link 2. If it's a website with a neutral or positive  article, a good title could be 'Article about Mike Smith, Orthopedic Surgeon from San Francisco'." class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="linktitle2"/></td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Link 3 <a tabindex="-1" href="javascript://" title="Add any neutral or positive websites that you wish to promote. Do not add any negative websites you wish to suppress. We highly recommend adding at least one 'Personal Website', i.e. www.yourname.com. Personal websites can be purchased from SearchManipulator. " class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="link3_oLink"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Link Title 3 <a tabindex="-1" href="javascript://" title="" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="linktitle3"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Link 4 <a tabindex="-1" href="javascript://" title="Add any neutral or positive websites that you wish to promote. Do not add any negative websites you wish to suppress. We highly recommend adding at least one 'Personal Website', i.e. www.yourname.com. Personal websites can be purchased from SearchManipulator. " class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="link4_oLink"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Link Title 4 <a tabindex="-1" href="javascript://" title="" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="linktitle4"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">Link 5 <a tabindex="-1" href="javascript://" title="Add any neutral or positive websites that you wish to promote. Do not add any negative websites you wish to suppress. We highly recommend adding at least one 'Personal Website', i.e. www.yourname.com. Personal websites can be purchased from SearchManipulator. " class="q">?</a></td>
+				<td style="width:55%">
+					<input type="text" id="link5_oLink"/>
+				</td>
+			</tr>
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Link Title 5 <a tabindex="-1" href="javascript://" title="" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="linktitle5"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Link 6 <a tabindex="-1" href="javascript://" title="Add any neutral or positive websites that you wish to promote. Do not add any negative websites you wish to suppress. We highly recommend adding at least one 'Personal Website', i.e. www.yourname.com. Personal websites can be purchased from SearchManipulator. " class="q">?</a></td><td style="width:55%"><input type="text" id="link6_oLink"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Link Title 6 <a tabindex="-1" href="javascript://" title="" class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="linktitle6"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Link 7 <a tabindex="-1" href="javascript://" title="Add any neutral or positive websites that you wish to promote. Do not add any negative websites you wish to suppress. We highly recommend adding at least one 'Personal Website', i.e. www.yourname.com. Personal websites can be purchased from SearchManipulator. " class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="link7_oLink"/>
+				</td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Link Title 7 <a tabindex="-1" href="javascript://" title="" class="q">?</a></td><td style="width:55%"><input type="text" id="linktitle7"/>
+				</td>
+			</tr>
+
+			<tr class="c1">
+				<td style="padding: 10px; width:45%">
+					Link 8 
+					<a tabindex="-1" href="javascript://" title="Add any neutral or positive websites that you wish to promote. Do not add any negative websites you wish to suppress. We highly recommend adding at least one 'Personal Website', i.e. www.yourname.com. Personal websites can be purchased from SearchManipulator. " class="q">?</a>
+				</td>
+				<td style="width:55%">
+					<input type="text" id="link8_oLink"/></td>
+			</tr>
+
+			<tr class="c0">
+				<td style="padding: 10px; width:45%">
+					Link Title 8 
+					<a tabindex="-1" href="javascript://" title="" class="q">?</a>
+				</td>
+				<td style="width:55%"><input type="text" id="linktitle8"/></td>
+			</tr>
+		
+		</table>
+	</div>	
+</div>
+    
+</center>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/options.css" />
+    
+    <title>Your Information</title>
+    
+    <script src="../js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript" src="../js/sm/attributes.js"></script>
+	<script type="text/javascript">
+	<!--    
+		$(document).ready(function(){
+			
+			function recursive(thisObj){
+				
+				var rows = 0;
+				
+				for (i in thisObj) {
+				
+				  if (typeof thisObj[i] === 'object'){
+					  
+					//recursive(thisObj[i]);
+					process(thisObj[i],rows);
+					
+					/*
+					var me = thisObj[i];
+					
+					if(me.field) console.log("Field: " + me.field);
+					if(me.id)	 console.log("ID: " + me.id);
+					if(me.name)  console.log("Name: " + me.name);
+					if(me.type)  console.log("Type: " + me.type);
+					*/
+				  } else {
+					//process(thisObj[i],rows);
+					//console.log(thisObj[i]);
+				  }
+				  
+				  rows++;
+				}
+			}
+			
+			function process(v,rows){
+			
+				var doc = document;
+			
+				var rowItem		= doc.createElement('tr');//$('tr');
+				var cellItemA	= doc.createElement('td');//$('td');
+				var cellItemB	= doc.createElement('td');//$('td');
+				var faqLink		= doc.createElement('a');//$('a');
+				
+				// Create the field
+				// var formField = (v.field === "select") ? $('select') : $('input');
+				var formField = (v.field === "select") ? 
+					doc.createElement('select') : doc.createElement('input');
+				
+				if(v.id)   formField.setAttribute('id',v.id);
+				if(v.name) formField.setAttribute('name',v.name);
+				if(v.type) formField.setAttribute('type',v.type);
+				
+				if(v.type === "radio" && v.checked === "true") 
+					formField.setAttribute('checked');
+				
+				var rowClass = (rows % 2 == 0) ? "c0" : "c1";
+				
+				rowItem.setAttribute('class',rowClass);
+
+				faqLink.setAttribute('title',v.title);				
+				faqLink.setAttribute('class','q');
+				faqLink.setAttribute('href'	,'#');
+				
+				//cellItemA.appendChild(v.text);
+				cellItemA.appendChild(faqLink);
+				
+				rowItem.appendChild(cellItemA);
+				
+				cellItemB.appendChild(formField);				
+				rowItem.appendChild(cellItemB);
+		
+				//$('#mainTable').append(rowItem);
+				doc.getElementById('mainTable').appendChild(rowItem);
+				
+			}
+			
+			var obj = json.fields;
+			recursive(obj);
+				
+		});
+		
+	
+	//-->
+	</script>
+	<script src="../js/sm/options.js" type="text/javascript"></script>
+
+</head>
+<body>
+	<div class="optionlist">
+		<br/>    
+		<img src="../images/header.png">
+		<br/><br/>
+
+		<button class="btn" id="go" title="Click here to start registering accounts">GO</button>
+		<button class="btn" id="reset" title="Click here to reset data">RESET</button>
+		<button class="btn" id="urlguide" title="Click here to start check the list of user url">URL GUIDE</button>
+		<br/><br/>
+
+		<div style="width:500px">
+
+			<table style="border:0; padding: 0; width: 100%;" id="mainTable">			
+				<tr>
+					<td colspan="2"><img src="../images/loadopt.png"></td>
+				</tr>
+
+				<tr class="c1">
+					<td style="padding: 10px; width:45%">
+						Load From Sets 
+						<a tabindex="-1" href="javascript://" title="Loads the values from the other sets." class="q">?</a>
+					</td>
+
+					<td style="width:55%">
+						<select id="loadset" style="width: 55%;"></select>				
+						<button class="btn" title="Loads a set of pre-formatted data from a other sets." id="load_data">
+							Load Data
+						</button>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">
+						<img src="../images/accopt.png">
+					</td>
+				</tr>
+
+			</table>
+		</div>	
+	</div>
+</body>
+
+</html>
