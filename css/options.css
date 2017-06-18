@@ -1,0 +1,239 @@
+body {
+    font-family: Verdana, san-serif, Helvetica !important;
+	overflow-x: hidden;	
+	background-color: white;
+	margin: 0;
+	line-height: 1.2em;	
+	font-weight: bold;
+}
+
+.optionlist {
+	width: 520px;height: 598px;
+	margin-left: auto; margin-right: auto;
+}
+
+input:focus {
+	border: 2px solid #999;
+}
+
+td {
+padding-top: 2px;
+padding-bottom: 2px;
+}
+td img { 
+	padding: 0px; 
+	border-width: 0px; 
+	margin:0px; 
+	display: block;
+}
+
+/*input {
+	width: 95%;
+	padding: 3px;
+	border: 2px solid #CCC;
+	font-size: 15px;
+	font-family: Georgia, serif;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}*/
+
+select 
+{
+	padding: 5px;   
+    border: 1px solid #DDDDDD;
+    outline:none;
+	width: 95%;
+    /*Applying CSS3 gradient*/
+    background: -moz-linear-gradient(center top , #FFFFFF,  #EEEEEE 1px, #FFFFFF 20px);    
+    background: -webkit-gradient(linear, left top, left 20, from(#FFFFFF), color-stop(5%, #EEEEEE) to(#FFFFFF));
+    cursor:pointer;
+    /*Applying CSS 3radius*/   
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    /*Applying CSS3 box shadow*/
+    -moz-box-shadow: 0 0 2px #DDDDDD;
+    -webkit-box-shadow: 0 0 2px #DDDDDD;
+    box-shadow: 0 0 2px #DDDDDD;
+}
+input[type="text"]{
+    
+    padding: 5px;   
+    border: 1px solid #DDDDDD;
+    outline:none;
+	width: 95%;
+    /*Applying CSS3 gradient*/ 
+    background: -webkit-gradient(linear, left top, left 20, from(#FFFFFF), color-stop(5%, #EEEEEE) to(#FFFFFF));
+    
+    /*Applying CSS 3radius*/   
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    /*Applying CSS3 box shadow*/
+    -webkit-box-shadow: 0 0 2px #DDDDDD;
+    box-shadow: 0 0 2px #DDDDDD;
+
+}
+input[type="text"]:hover
+{
+    border:1px solid #cccccc;
+}
+input[type="text"]:focus
+{
+    box-shadow:0 0 2px #FFFE00;
+}
+
+
+/*select {
+	width: 95%;
+	padding: 3px;
+	border: 2px solid #CCC;
+	font-size: 15px;
+	font-family: Georgia, serif;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}*/
+
+#male, #female, #bxTwitter, #bxLinkedIn {
+	font-size: 8px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border: 0px;
+	width: 20%;
+	padding: 0px;
+}
+
+.q {
+	text-decoration: none;
+	color: blue;
+	position: relative;
+	font-size: 14px;
+	float: right;
+}
+
+/*.btn {
+	border: 0;
+	width: 100px;
+	height: 30px;
+	background: url("../images/button.png");
+	font-size: 8pt;
+	font-weight: bold;
+	color: black;
+	outline:none;
+}
+
+.btn:hover {
+	background: url("../images/h_button.png"); color: white;
+}
+*/
+
+.btn 
+{
+	border: 0;
+	width: 109px;
+	height: 40px;
+	background: url("../images/loaddata_button.png");
+	font-size: 8pt;
+	font-weight: bold;
+	color: black;
+	outline:none;
+	cursor:pointer;
+}
+.go
+{
+	border: 0;
+	width: 73px;
+	height: 73px;
+	background: url("../images/go_button.png");
+	font-size: 8pt;
+	font-weight: bold;
+	color: black;
+	outline:none;
+	cursor:pointer;
+}
+.reset
+{
+	border: 0;
+	width: 73px;
+	height: 73px;
+	background: url("../images/reset_button.png");
+	font-size: 8pt;
+	font-weight: bold;
+	color: black;
+	outline:none;
+	cursor:pointer;
+}
+.url_guide
+{
+	border: 0;
+	width: 73px;
+	height: 73px;
+	background: url("../images/url_button.png");
+	font-size: 8pt;
+	font-weight: bold;
+	color: black;
+	outline:none;
+	cursor:pointer;
+}
+
+.save
+{
+	border: 0;
+	width: 73px;
+	height: 73px;
+	background: url("../images/save_button.png");
+	font-size: 8pt;
+	font-weight: bold;
+	color: black;
+	outline:none;
+	cursor:pointer;
+}
+.btn:hover
+{
+	background: url("../images/loaddata_hover_button.png");
+}
+
+.go:hover
+{
+	background: url("../images/go_hover_button.png");
+	
+}
+
+.save:hover
+{
+	background: url("../images/save_hover_button.png");
+	
+}
+
+.reset:hover
+{
+	background: url("../images/reset_hover_button.png");
+	
+}
+
+.url_guide:hover
+{
+	background: url("../images/url_hover_button.png");
+	
+}
+.c0 {
+	background-color: #FFF; color: black;
+}
+
+.c1 {
+	background-color: #DDD; color: black;
+}
+
+tr.c0:first-child, tr.c1:first-child {
+    padding: 10px; width:45%;    
+}
+
+tr.c0:first-child + td, tr.c1:first-child + td {
+    width:55%;    
+}
+
+tr.c0 td select, tr.c1 td select {
+    width:100%;    
+}
+

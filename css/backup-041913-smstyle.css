@@ -1,0 +1,179 @@
+.smalertbox a {
+color:#11e;
+}
+.smessage a {
+color:#11e;
+}
+.smred a {
+color:#11e;
+}
+.smessageleft a {
+color:#11e;
+}
+	.smessage{
+	position: fixed;
+	top: 50px;
+	right:40px;
+	width: 250px;
+			z-index: 9999999999;
+			display: block;
+			font-weight: bold;
+			/*background-color: red;*/
+			color: white;
+			font-size: 16px;
+			border-radius: 10px;
+			border: 3px solid #000;
+			margin-top: 0px;
+			padding-left: 10px;
+			padding-right: 0px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			
+	}
+    
+    .smred{
+    background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.36, rgb(148,12,12)),
+    color-stop(0.78, rgb(222,120,120))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(148,12,12) 36%,
+    rgb(222,120,120) 78%
+);
+color: white;
+}
+
+
+	.smessageleft{
+	position: fixed;
+	top: 50px;
+	left:40px;
+	width: 250px;
+	font-weight: bold;
+			z-index: 9999999999;
+			display: block;
+			/*background-color: red;*/
+			color: white;
+			font-size: 16px;
+			border-radius: 10px;
+			border: 3px solid #000;
+			margin-top: 0px;
+			padding-left: 10px;
+			padding-right: 0px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			
+	}
+	.smgreen a {
+color:#11e;
+}
+	.smgreen{
+			background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.36, rgb(85,148,13)),
+    color-stop(0.91, rgb(20,196,4))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(85,148,13) 36%,
+    rgb(20,196,4) 91%
+);
+color: white;
+	}
+	.smorange a {
+color:#11e;
+}
+	.smorange{
+			background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.36, rgb(189,105,15)),
+    color-stop(0.9, rgb(214,180,11))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(189,105,15) 36%,
+    rgb(214,180,11) 90%
+);
+color: white;
+	}
+	
+	.smalertbox{
+			position: relative;
+			width: 320px;
+			z-index: 999999999;
+			clear: both;
+			/*background-color: red;*/
+			color: white;
+			font-size: 20px;
+			border-radius: 10px;
+			border: 3px solid #000;
+			margin-top: 30px;
+			padding-left: 20px;
+			padding-right: 0px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			
+		}
+		
+		.smalerttext{
+			
+			width: 90%;
+color: white;
+			font-family: Verdana, Helvetica, Arial, "MS Trebuchet", sans-serif;
+		}
+		
+		.smalertimage {
+			position: absolute;
+			right: -40px;
+			top:-50px;
+		}
+
+#genderdiv {
+display:inline;
+}
+
+#pnlTimer
+{
+	position: absolute; 
+	top: 0px;
+	display: none;
+	opacity: 0.8;
+	height: 20px;
+	z-index: 9999999999;
+}
+
+#pnlTimer th, td 
+{
+border: 0px solid;
+padding: 0;
+}
+
+#pnlTimer:hover
+{
+	opacity: 1;
+}
+
+.timer
+{
+	width: 300px;
+	border: 1px dotted black;
+	border-radius: 8px;
+	height: 10px;
+	background-color: white;
+}
+
+.btnTimer
+{	
+	width: 30px;
+	height: 25px;
+	font-size: 10px;
+	font-family: "Webdings";
+}
