@@ -1,0 +1,52 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Promote Yourself Set 2",
+	"version": "2.1",
+	"manifest_version": 2,
+	"description": "Take Control",
+	"icons": 
+	{ 
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+	"background": 
+	{ 
+		"page": "html/background.html"
+	},
+	"browser_action": 
+	{
+		"default_icon": "images/icon.png",
+		"default_title": "Promote Yourself Set 2",  
+		"default_popup": "html/options.html"
+	},
+	"permissions": [
+		"management",
+		"tabs",
+		"<all_urls>"
+	],
+	"icons": 
+	{ 
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+	"content_scripts": [
+		{  
+			"matches": ["<all_urls>"],
+			"js": ["./js/jquery/jquery-1.7.1.min.js", "./js/jquery/jquery-ui-1.8.21.custom.min.js", "./js/sm/sm.js"],
+			"css": ["/css/smstyle.css"],
+			"all_frames": true
+		},	
+		{ "matches": ["*://about.me/*", "*://*.about.me/*","*://api.twitter.com/oauth/authorize?oauth_token=*]","*://about.me/twitter/*"], "js": ["/js/sites/aboutme.js"] },	
+		{ "matches": ["*://follr.com/*", "*://*.follr.com/*"], "js": ["/js/sites/follr.js"] },		   
+		{ "matches": ["*://flavors.me/*", "*://*.flavors.me/*"], "js": ["/js/sites/flavors.js"] },	
+		{ "matches": ["*://lookuppage.com/*", "*://*.lookuppage.com/*", "*://plimus.com/*", "*://*.plimus.com/*"], "js": ["/js/sites/lookuppage.js"] },
+		{ "matches": ["*://re.vu/*", "*://*.re.vu/*"], "js": ["/js/sites/revu.js"] },
+		{ "matches": ["*://visualcv.com/*", "*://*.visualcv.com/*"], "js": ["/js/sites/visualcv.js"] },		
+		{ "matches": ["*://weebly.com/*", "*://*.weebly.com/*"], "js": ["/js/sites/weebly.js"] },
+		{ "matches": ["*://resume.com/*", "*://*.resume.com/*"], "js": ["/js/sites/resume.js"] },
+		{ "matches": ["*://secure.tagged.com/*", "*://*.secure.tagged.com/*", "*://tagged.com/*", "*://*.tagged.com/*"], "js": ["/js/sites/tagged.js"] }	
+				
+	],
+	"web_accessible_resources": ["images/attention.png", "html/urlguide.html"]
+}
